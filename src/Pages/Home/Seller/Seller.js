@@ -5,9 +5,13 @@ const Seller = () => {
     return (
         <div className='container'>
             <h2 className='text-center mt-5  mb-5'>Our Selling Partner</h2>
-    <div className="row">
-        <div className="col-md-3">
-        <div className='card'>
+    <div className=" ">
+        <div className=" mx-auto">
+        <div className='card '>
+                <img className='w-25' src={seller} alt="" />
+                <p>Name: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, cupiditate.</p>
+            </div>
+            <div className='card '>
                 <img className='w-25' src={seller} alt="" />
                 <p>Name: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, cupiditate.</p>
             </div>
@@ -15,11 +19,7 @@ const Seller = () => {
                 <img className='w-25' src={seller} alt="" />
                 <p>Name: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, cupiditate.</p>
             </div>
-            <div className='card'>
-                <img className='w-25' src={seller} alt="" />
-                <p>Name: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, cupiditate.</p>
-            </div>
-            <div className='card'>
+            <div className='card '>
                 <img className='w-25' src={seller} alt="" />
                 <p>Name: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, cupiditate.</p>
             </div>
