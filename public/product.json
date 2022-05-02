@@ -7,6 +7,8 @@
         "price": 420,
         "stock": 20,
         "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbaf991a78bc4896a3e9ad7800abcec6_9366/Ultraboost_22_Shoes_Black_GZ0127_01_standard.jpg",
+        "shipping": 1,
+        "quantity": 0,
         "description": "lorem loremloremloremloremloremloremloremlorem"
       },
       {
@@ -17,6 +19,7 @@
         "price": 196,
         "stock": 19,
         "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2cee64414e1f4f31baf1ae270099d950_9366/Lunar_New_Year_Ultraboost_DNA_Shoes_Black_GZ6074_01_standard.jpg",
+
         "description": "lorem loremloremloremloremloremloremloremlorem"
       },
       {
