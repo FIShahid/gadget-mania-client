@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Signup.css'
 import auth from '../../../firebase.init';
-// import SocialLogin from '../SocialLogin/SocialLogin';
-// import Loading from '../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -24,8 +24,7 @@ const SignUp = () => {
 
     }
     if (loading || updating) {
-        return;
-        // return <Loading></Loading>
+        return <Loading></Loading>
     }
 
     if (user) {
@@ -69,7 +68,7 @@ const SignUp = () => {
 
             </form>
             <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
-            {/* <SocialLogin></SocialLogin> */}
+            <SocialLogin></SocialLogin>
             <ToastContainer></ToastContainer>
             <br />
             <br />

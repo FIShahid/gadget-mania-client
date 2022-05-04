@@ -5,7 +5,8 @@ import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-// import Loading from '../../Shared/Loading/Loading';
+import Loading from '../../Shared/Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -35,8 +36,7 @@ const Login = () => {
         errorElement = <p className='text-danger fw-bold'>❌ User Email or Password Did Not Matched!!!!</p>
     }
     if (loading || sending) {
-        return;
-        // return <Loading></Loading>
+        return <Loading></Loading>
     }
     const handleSubmit = e => {
         e.preventDefault();
@@ -83,9 +83,9 @@ const Login = () => {
                 </Button>
             </Form>
             {errorElement}
-            <p>New to Gadget Mania? <Link to='/signup' className='text-primary text-decoration-none' onClick={navigateSignUp}>Please Sign Up</Link></p>
+            <p>New to gadget mania? <Link to='/signup' className='text-primary text-decoration-none' onClick={navigateSignUp}>Please Sign Up</Link></p>
             <p>Forgot your Password? <button className='btn btn-link text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
-           
+            <SocialLogin></SocialLogin>
             <ToastContainer></ToastContainer>
             <br />
             <br />
