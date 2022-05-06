@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import ManageInventory from '../ManageInventory/ManageInventory';
 
 
 const Inventory = () => {
@@ -103,6 +104,7 @@ const Inventory = () => {
                 <button className='btn btn-primary' onClick={()=>updateStock(_id)}>Update Stock</button>
             </div>
             </div>
+           <Link to='/manageInventory' element={<ManageInventory></ManageInventory>} > <button className='btn btn-info w-50 mx-auto'>Manage Inventory</button></Link>
 
 
         </div>

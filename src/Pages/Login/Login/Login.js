@@ -83,7 +83,7 @@ const Login = () => {
                 </Button>
             </Form>
             {errorElement}
-            <p>New to gadget mania? <Link to='/signup' className='text-primary text-decoration-none' onClick={navigateSignUp}>Please Sign Up</Link></p>
+            <p>Gadget Maina? <Link to='/signup' className='text-primary text-decoration-none' onClick={navigateSignUp}>Please Sign Up</Link></p>
             <p>Forgot your Password? <button className='btn btn-link text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
             <ToastContainer></ToastContainer>

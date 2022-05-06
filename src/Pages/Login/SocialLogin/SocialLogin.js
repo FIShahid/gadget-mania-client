@@ -10,9 +10,12 @@ const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     const location = useLocation();
+
     let from = location?.state?.from?.pathname || "/";
+    
 
     let errorElement;
+
     if (error) {
         errorElement = <p className='text-danger fw-bold'>❌ Something Went Wrong</p>
 
@@ -20,9 +23,11 @@ const SocialLogin = () => {
     if (loading) {
         return <Loading></Loading>
     }
+
     if (user) {
         navigate('/home')
     }
+
     //redirect to checkout
     if (user) {
         navigate(from, { replace: true });
