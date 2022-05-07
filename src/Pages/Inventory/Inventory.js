@@ -12,10 +12,12 @@ const Inventory = () => {
     const {_id, name ,img ,description ,seller ,stock ,price} = product;
 
     useEffect(() => {
+       if(inventoryId){
         const url = `http://localhost:5000/inventory/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
+       }
     }, []);
 
     const minus = id =>{
