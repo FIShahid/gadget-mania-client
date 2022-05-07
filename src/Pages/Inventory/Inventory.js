@@ -4,108 +4,121 @@ import ManageInventory from '../ManageInventory/ManageInventory';
 
 
 const Inventory = () => {
-   
-   
+
+
     const { inventoryId } = useParams()
     const [product, setProduct] = useState({});
     const [error, setError] = useState('');
-    const {_id, name ,img ,description ,seller ,stock ,price} = product;
+    const { _id, name, img, description, seller, stock, price } = product;
 
     useEffect(() => {
-       if(inventoryId){
-        const url = `https://intense-dawn-79079.herokuapp.com/inventory/${inventoryId}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProduct(data))
-       }
+        if (inventoryId) {
+            const url = `https://intense-dawn-79079.herokuapp.com/inventory/${inventoryId}`;
+            fetch(url)
+                .then(res => res.json())
+                .then(data => setProduct(data))
+        }
     }, []);
 
-    const minus = id =>{
+    const minus = id => {
         const i = product.stock--;
-        if(i>0){
+        if (i > 0) {
             console.log(`{id:${i}}`);
             console.log(product);
             const url = `https://intense-dawn-79079.herokuapp.com/inventory/${inventoryId}`
             fetch(url, {
                 method: 'PUT',
-                headers:{
+                headers: {
                     'content-type': 'application/json'
                 },
                 body: JSON.stringify(product)
             })
-            .then(res=>res.json())
-            .then(data=>{
-                console.log('success'.data);
-                setProduct({...product, stock: product.stock})
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log('success'.data);
+                    setProduct({ ...product, stock: product.stock })
+                })
         }
         else return;
 
     }
 
 
-   
+
     const [input, setInput] = useState(0)
-    const inputValue = e =>{
+    const inputValue = e => {
         e.preventDefault()
-       
+
         setInput(e.target.value);
-        
-    } 
-    const updateStock = id =>{
+
+    }
+    const updateStock = id => {
         console.log(input);
         const newStock = (stock + parseInt(input));
-        if(isNaN(newStock)){
+        if (isNaN(newStock)) {
             setError("Input a Number")
             return
-        } 
-        else{
+        }
+        else {
             setError('')
         }
         console.log(parseFloat(newStock));
         const update = { ...product, stock: newStock }
         const url = `https://intense-dawn-79079.herokuapp.com/inventory/${inventoryId}`;
-        fetch(url,{
+        fetch(url, {
             method: 'PUT',
-            headers:{
+            headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(update)
         })
-        .then(res=>res.json())
-        .then(data=>{
-            setProduct({...product, stock: newStock})
+            .then(res => res.json())
+            .then(data => {
+                setProduct({ ...product, stock: newStock })
 
-        })
-    
+            })
+
     }
 
- 
+
     return (
         <div>
-            <h2>Inventory Items: </h2>
-            <br />
-            <br />
-            <br />
-            <div className='card w-50 mx-auto'>
-                <h4>{product.name}</h4>
-                <img className='w-25' src={product.img} alt="" />
-                <p>Description:{product.description}</p>
-                <h6>Seller:{product.seller}</h6>
-                <p>Stock:{product.stock}</p>
-                <h6>Price:{product.price}</h6>
-                <button className='btn btn-primary' onClick={()=>minus(_id)}> Delivered</button>
+            <h2 className='text-center text-primary mt-3'>Inventory Items: </h2>
+            <div class="container py-3 ">
+                <div class="card shadow-lg p-2">
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <img className='w-100' src={product.img} alt="" />
+                        </div>
+                        <div class="col-md-4 px-3">
+                            <div class="card-block px-3">
+                                <h4 className="card-title mt-3">{product.name}</h4>
+                                <p class="card-text"><span className='fw-bold'>Description: </span>{product.description}</p>
+                                <h6>Seller:{product.seller}</h6>
+                                <h6>Price: $ {product.price}</h6>
+                                <h5>Stock:{product.stock}</h5>
+                                <button className='btn btn-primary mt-3 w-75 m-auto rounded-pill' onClick={() => minus(_id)}> Delivered</button>
+                            </div>
+                        </div>
 
-                <br />
-                <br />
-               
-            <div onSubmit={inputValue}>
-                <input onChange={inputValue} type="text" />
-                <p>{error}</p>
-                <button className='btn btn-primary' onClick={()=>updateStock(_id)}>Update Stock</button>
+                    </div>
+                </div>
+                <h4 className='text-center text-primary mt-3'>Update Stock Quantity</h4>
+                <div className='mt-3 w-75 mx-auto '>
+                    <div className="form-outline mb-4">
+                        <input onChange={inputValue} type="text" id="form4Example1" className="form-control" placeholder='Stock Quantity' />
+                        <p>{error}</p>
+                        <button className='btn btn-primary w-100 ' onClick={() => updateStock(_id)}>Update Stock</button>
+                    </div>
+
+                </div>
             </div>
+
+
+
+            <div className='text-center'>
+                <Link to='/manageInventory' element={<ManageInventory></ManageInventory>} > <button className='btn btn-info w-50 mx-auto'>Manage Inventory</button></Link>
             </div>
-           <Link to='/manageInventory' element={<ManageInventory></ManageInventory>} > <button className='btn btn-info w-50 mx-auto'>Manage Inventory</button></Link>
 
 
         </div>
