@@ -13,7 +13,7 @@ const Inventory = () => {
 
     useEffect(() => {
        if(inventoryId){
-        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        const url = `https://intense-dawn-79079.herokuapp.com/inventory/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -25,7 +25,7 @@ const Inventory = () => {
         if(i>0){
             console.log(`{id:${i}}`);
             console.log(product);
-            const url = `http://localhost:5000/inventory/${inventoryId}`
+            const url = `https://intense-dawn-79079.herokuapp.com/inventory/${inventoryId}`
             fetch(url, {
                 method: 'PUT',
                 headers:{
@@ -64,7 +64,7 @@ const Inventory = () => {
         }
         console.log(parseFloat(newStock));
         const update = { ...product, stock: newStock }
-        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        const url = `https://intense-dawn-79079.herokuapp.com/inventory/${inventoryId}`;
         fetch(url,{
             method: 'PUT',
             headers:{

@@ -6,7 +6,7 @@ const AddItem = () => {
     
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/inventory`;
+        const url = `https://intense-dawn-79079.herokuapp.com/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {
