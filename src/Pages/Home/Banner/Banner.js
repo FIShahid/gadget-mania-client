@@ -15,8 +15,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>Dream. Plan. Explore.</h3>
-                    <p>The world is a book and those who do not travel read only one page..</p>
+                    <h2>Apple Gadgets: Smartphones, Gadgets and Premium Accessories</h2>
+                   
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -27,8 +27,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Your Adventure Begins Here</h3>
-                    <p>Not all those who wander are lost...</p>
+                    <h2>Gadgets Mania - Wholesale Suppliers Online</h2>
+                    
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -39,8 +39,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Into the Wild with Me</h3>
-                    <p>Life is either a daring adventure or nothing at all.</p>
+                    <h2>All Latest Gadget in One Place</h2>
+                    
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
