@@ -9,6 +9,7 @@ import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+const axios = require('axios')
 
 const Login = () => {
     const emailRef = useRef('');
@@ -29,7 +30,7 @@ const Login = () => {
 
     //redirect user
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
         //error handling
     if (error) {
@@ -38,11 +39,15 @@ const Login = () => {
     if (loading || sending) {
         return <Loading></Loading>
     }
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password)
+        await signInWithEmailAndPassword(email, password);
+        const {data} = await axios.post('http://localhost:5000/login', {email});
+        // console.log(data);
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
     const navigateSignUp = e => {
         navigate('/signup')
@@ -83,7 +88,7 @@ const Login = () => {
                 </Button>
             </Form>
             {errorElement}
-            <p>Gadget Maina? <Link to='/signup' className='text-primary text-decoration-none' onClick={navigateSignUp}>Please Sign Up</Link></p>
+            <p>Gadget Mania? <Link to='/signup' className='text-primary text-decoration-none' onClick={navigateSignUp}>Please Sign Up</Link></p>
             <p>Forgot your Password? <button className='btn btn-link text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
             <ToastContainer></ToastContainer>

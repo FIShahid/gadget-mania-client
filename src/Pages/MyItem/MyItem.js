@@ -1,18 +1,30 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
-const axios = require('axios');
+//const axios = require('axios');
 
 const MyItem = () => {
     const [user] = useAuthState(auth);
     const [myItems, setMyItems] = useState([]);
-
+    const navigate = useNavigate()
     useEffect(()=>{
             const getItems = async () =>{
                 const email = user.email;
+              try{
                 const url = `http://localhost:5000/myItem?email=${email}`
-                const {data} = await axios.get(url)
+                const {data} = await axiosPrivate.get(url)
                 setMyItems(data)
+              }
+              catch(error){
+                  console.log(error.messege);
+                  if(error.response.status===401 || error.response.status===403){
+                      signOut(auth);
+                    navigate('/login')
+                  }
+              }
             }
             getItems();
     }, [user])
