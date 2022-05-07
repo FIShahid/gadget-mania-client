@@ -48,7 +48,6 @@ const Inventory = () => {
         e.preventDefault()
        
         setInput(e.target.value);
-        e.target.reset('')
         
     } 
     const updateStock = id =>{
@@ -98,7 +97,7 @@ const Inventory = () => {
                 <br />
                 <br />
                
-            <div onsubmit={inputValue}>
+            <div onSubmit={inputValue}>
                 <input onChange={inputValue} type="text" />
                 <p>{error}</p>
                 <button className='btn btn-primary' onClick={()=>updateStock(_id)}>Update Stock</button>

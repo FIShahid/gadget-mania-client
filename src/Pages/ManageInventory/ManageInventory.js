@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useProduct from '../../hooks/useProduct';
 
 const ManageInventory = () => {
@@ -25,6 +26,7 @@ const ManageInventory = () => {
             {
                 products.map(product=> <div key={product._id}>
                     <h4>{product.name}</h4> <button onClick={()=>handleDelete(product._id)} className='btn btn-danger'>Delete</button>
+                    <Link to='/addItem' ><button className='btn btn-info'>Add Item</button> </Link>
 
                 </div>)
             }
