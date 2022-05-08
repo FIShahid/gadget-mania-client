@@ -50,9 +50,9 @@ const SignUp = () => {
     
 }
     return (
-        <div className='signup-form'>
+        <div className='signup-form container-fluid'>
             <h2 className='text-primary text-center mt-3 mb-2'  >Please Sign Up</h2>
-            <div className='container mx-auto shadow-lg p-2 rounded ' style={{backgroundColor:'#D3D3D3' }}>
+            <div className='container mx-auto shadow-lg p-4 rounded ' style={{backgroundColor:'#D3D3D3' }}>
             <form onSubmit={handleRegister} >
                 <input type="text" name="name" id="" placeholder='Your Name' required />
 

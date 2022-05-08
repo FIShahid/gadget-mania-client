@@ -1,8 +1,9 @@
 import React from 'react';
-import { useForm } from "react-hook-form";
+import { useForm , reset} from "react-hook-form";
+import { toast, ToastContainer } from 'react-toastify';
 
 const AddItem = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit ,reset } = useForm();
     
     const onSubmit = data => {
         console.log(data);
@@ -17,8 +18,14 @@ const AddItem = () => {
         .then(res=> res.json())
         .then(result =>{
             console.log(result);
+        reset();
+            
         } )
     };
+    const handleAddSubmit =e =>{
+        toast("Your Item Successfully Added")
+        e.target.reset('')
+    }
 
     return (
         <div>
@@ -32,9 +39,10 @@ const AddItem = () => {
                 <input className='mb-2' placeholder='Item Quantity' type="text" {...register("stock")} />
                 <input className='mb-2' placeholder='Seller Name' type="text" {...register("seller")} />
                 <input className='mb-2' placeholder='email' type="text" {...register("email")} />
-                <input type="submit" value="Add Product" className='btn btn-primary' />
+                <input onClick={handleAddSubmit} type="submit" value="Add Product" className='btn btn-primary' />
             </form>
         </div>
+        <ToastContainer></ToastContainer>
         </div>
     );
 };

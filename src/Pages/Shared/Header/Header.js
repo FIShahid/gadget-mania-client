@@ -23,8 +23,8 @@ const Header = () => {
                             {/* <Nav.Link as={Link} to='/services'>Services</Nav.Link> */}
                             {/* <Nav.Link href="home#services">Services</Nav.Link>
                             <Nav.Link href="home#reviews">Reviews</Nav.Link> */}
-                             <Nav.Link  as={Link} to='/inventory'>Inventory</Nav.Link>
-                            <Nav.Link  as={Link} to='/manageInventory'>Manage Inventory</Nav.Link>
+                             {/* <Nav.Link  as={Link} to='/inventory'>Inventory</Nav.Link>
+                            <Nav.Link  as={Link} to='/manageInventory'>Manage Inventory</Nav.Link> */}
                             <Nav.Link  as={Link} to='/blogs'>Blogs</Nav.Link>
                            
 

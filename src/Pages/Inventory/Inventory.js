@@ -75,6 +75,7 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => {
                 setProduct({ ...product, stock: newStock })
+                
 
             })
 

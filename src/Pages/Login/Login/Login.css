@@ -1,0 +1,10 @@
+.login-form{
+    width: 50%;
+    margin: auto;
+}
+@media  only screen and (max-width:576px) {
+    .login-form{
+        width: 90%;
+        margin: auto;
+    }
+}

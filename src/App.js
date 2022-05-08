@@ -50,7 +50,7 @@ function App() {
       <Route path='/signup' element={<SignUp></SignUp>}></Route>
       <Route path='*' element={<NotFound></NotFound>}></Route>
      
-
+  
 
       </Routes>
       <Footer></Footer>
