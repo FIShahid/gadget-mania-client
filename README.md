@@ -3,9 +3,11 @@
 ## Project Link: https://warehouse-management-c429a.web.app/
 
 ***
-
 ***
-### Project Details
+### Server Side Repo: https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-FIShahid
+***
+***
+#### Project Details
 
 ***
 
