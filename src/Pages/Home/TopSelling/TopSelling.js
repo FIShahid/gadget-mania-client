@@ -9,7 +9,7 @@ const TopSelling = () => {
       <div className='container' >
           <h4 className=' text-center mt-5 mb-5' style={{color:'#ef5350'}}>Top Selling Products</h4>
             <CardGroup>
-  <Card className='m-2'>
+  <Card className='m-2 p-2 rounded'>
     <Card.Img variant="top" src={macbook} />
     <Card.Body>
       <Card.Title>MacBook Pro M1</Card.Title>
@@ -17,7 +17,7 @@ const TopSelling = () => {
     </Card.Body>
    
   </Card>
-  <Card className='m-2'>
+  <Card className='m-2 p-2 rounded'>
     <Card.Img variant="top" src={samsung} />
     <Card.Body>
       <Card.Title>Samsung s21 Ultra</Card.Title>
@@ -25,7 +25,7 @@ const TopSelling = () => {
     </Card.Body>
     
   </Card>
-  <Card className='m-2'>
+  <Card className='m-2 p-2 rounded'>
     <Card.Img variant="top" src={iphone} />
     <Card.Body>
       <Card.Title>iPhone 13 pro</Card.Title>
