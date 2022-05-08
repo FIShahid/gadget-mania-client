@@ -23,8 +23,7 @@ const AddItem = () => {
         } )
     };
     const handleAddSubmit =e =>{
-        toast("Your Item Successfully Added")
-        e.target.reset('')
+        toast("Your Item Successfully Added");
     }
 
     return (
