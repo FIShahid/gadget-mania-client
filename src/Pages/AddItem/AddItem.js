@@ -29,8 +29,8 @@ const AddItem = () => {
 
     return (
         <div>
-            <h2 className='text-center mt-3 mb-3'>Please add a Product</h2>
-             <div className='w-50 mx-auto shadow-lg p-2 bg-success'>
+            <h2 className='text-center mt-3 mb-3' style={{color:'#ef5350'}}> Add a New Product</h2>
+             <div className='w-50 mx-auto shadow-lg p-4 rounded '>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2 ' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
@@ -39,7 +39,7 @@ const AddItem = () => {
                 <input className='mb-2' placeholder='Item Quantity' type="text" {...register("stock")} />
                 <input className='mb-2' placeholder='Seller Name' type="text" {...register("seller")} />
                 <input className='mb-2' placeholder='email' type="text" {...register("email")} />
-                <input onClick={handleAddSubmit} type="submit" value="Add Product" className='btn btn-primary' />
+                <input onClick={handleAddSubmit} type="submit" value="Add Product" className='btn'style={{ backgroundColor: '#66bb6a' }} />
             </form>
         </div>
         <ToastContainer></ToastContainer>

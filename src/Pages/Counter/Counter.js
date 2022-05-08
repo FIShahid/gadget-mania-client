@@ -5,7 +5,7 @@ const Counter = () => {
     return (
         <div>
             <div className="container">
-                <h2 className='text-center text-primary mt-5 mb-3'>Our Services</h2>
+                <h2 className='text-center mt-5 mb-3' style={{color:'#ef5350'}}>Warehouse Summary</h2>
     <div className="row">
     <div className="col-md-3">
       <div className="card-counter primary">

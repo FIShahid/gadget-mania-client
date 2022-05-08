@@ -13,7 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <Products></Products>
             <div className='text-center'>
-            <Link to='/manageInventory' element={<ManageInventory></ManageInventory>} > <button className='btn btn-info w-50 mx-5 mt-5'>Manage Inventory</button></Link>
+            <Link to='/manageInventory' element={<ManageInventory></ManageInventory>} > <button className='btn btn-info w-50 mx-5 mt-5 fw-bold' style={{ backgroundColor: '#66bb6a' }}>Manage Inventory</button></Link>
             </div>
             <TopSelling></TopSelling>
             <ProductRequest></ProductRequest>

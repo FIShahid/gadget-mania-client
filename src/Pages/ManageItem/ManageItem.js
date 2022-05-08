@@ -23,7 +23,7 @@ const ManageItem = () => {
     }
     return (
         <div>
-        <h3 className='text-center mt-3 mb-3'>Manage Items</h3>
+        <h3 className='text-center mt-3 mb-3' style={{color:'#ef5350'}}>Manage Items</h3>
         {
             products.map(product => <div key={product._id}>
                 <Table striped bordered hover responsive variant='dark' className='container   ' >
@@ -49,7 +49,7 @@ const ManageItem = () => {
             </div>)
         }
          <div className='text-center'>
-                <Link to='/addItem' ><button className='btn btn-info w-75 p-3 fw-bold'>Add Item</button> </Link>
+                <Link to='/addItem' ><button className='btn btn-info w-50 p-3 fw-bold rounded-pill' style={{ backgroundColor: '#66bb6a' }}>Add Item</button> </Link>
                 </div>
     </div>
     );

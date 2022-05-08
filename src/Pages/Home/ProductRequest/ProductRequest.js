@@ -7,7 +7,7 @@ const ProductRequest = () => {
   }
   return (
     <div className='container' >
-      <h2 className='text-center  mt-5 mb-5 p-2 ' style={{ color: '#b8860b' }}>Request For Products</h2>
+      <h2 className='text-center  mt-5 mb-5 p-2 ' style={{color:'#ef5350'}}>Request For Products</h2>
 
       <div className='row'>
         <div className='col-md-6'>
@@ -44,7 +44,7 @@ const ProductRequest = () => {
             </div>
 
 
-            <button type="submit" className="btn  btn-block mb-4 w-100 fw-bold" style={{ backgroundColor: '#32CD32' }} >Send</button>
+            <button type="submit" className="btn  btn-block mb-4 w-100 fw-bold" style={{ backgroundColor: '#66bb6a' }} >Send</button>
           </form>
         </div>
       </div>

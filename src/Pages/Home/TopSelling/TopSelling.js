@@ -7,7 +7,7 @@ import macbook from '../../../image/product/macbook.jpg'
 const TopSelling = () => {
     return (
       <div className='container' >
-          <h4 className='text-primary text-center mt-5 mb-5'>Top Selling Products</h4>
+          <h4 className=' text-center mt-5 mb-5' style={{color:'#ef5350'}}>Top Selling Products</h4>
             <CardGroup>
   <Card className='m-2'>
     <Card.Img variant="top" src={macbook} />

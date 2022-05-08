@@ -47,7 +47,7 @@ const MyItem = () => {
     }
     return (
         <div>
-            <h3 className='text-center text-primary mt-3 mb-3'>My Item : {myItems.length}</h3>
+            <h3 className='text-center mt-3 mb-3' style={{color:'#ef5350'}}>My Item : {myItems.length}</h3>
             {
                 myItems.map(product => <div key={product._id}>
                     <Table striped bordered hover responsive className='container   ' >
