@@ -11,7 +11,9 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Products></Products>
+            <div className='text-center'>
             <Link to='/manageInventory' element={<ManageInventory></ManageInventory>} > <button className='btn btn-info w-50 mx-5 mt-5'>Manage Inventory</button></Link>
+            </div>
             <Seller></Seller>
             <TopProducts></TopProducts>
         </div>

@@ -68,8 +68,9 @@ const Login = () => {
 
 
     return (
-        <div className='container w-50 mx-auto '>
+        <div  >
             <h2 className='text-primary text-center mt-3 mb-2'>Please Login</h2>
+            <div className='container w-50 mx-auto shadow-lg p-2 rounded' style={{backgroundColor:'#D3D3D3'}}>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -88,9 +89,10 @@ const Login = () => {
                 </Button>
             </Form>
             {errorElement}
-            <p>Gadget Mania? <Link to='/signup' className='text-primary text-decoration-none' onClick={navigateSignUp}>Please Sign Up</Link></p>
+            <p> New to Gadget Mania? <Link to='/signup' className='text-primary text-decoration-none' onClick={navigateSignUp}>Please Sign Up</Link></p>
             <p>Forgot your Password? <button className='btn btn-link text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
+            </div>
             <ToastContainer></ToastContainer>
             <br />
             <br />

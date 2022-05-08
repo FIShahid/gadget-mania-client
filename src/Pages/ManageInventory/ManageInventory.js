@@ -26,28 +26,28 @@ const ManageInventory = () => {
             <h3 className='text-center mt-3 mb-3'>Manage Inventory</h3>
             {
                 products.map(product => <div key={product._id}>
-                    <Table striped bordered hover responsive>
+                    <Table striped bordered hover responsive variant='dark' className='container   ' >
 
                        
-                        <tbody className=''>
-                            <tr>
-                                <td className='fw-bold'>{product.name}</td>
-                                <td><img style={{height:'60px'}} src={product.img} alt="" /></td>
+                        <tbody className='' >
+                            <tr className=''>
+                                <td className='fw-bold d-flex justify-content-center'>{product.name}</td>
+                                <td className=' d-flex justify-content-center'><img style={{height:'80px'}} src={product.img} alt="" /></td>
 
-                                <td className='fw-bold'><span>Available Product: </span>{product.stock}</td>
-                                <td> <button onClick={() => handleDelete(product._id)} className='btn btn-danger px-2'>Delete</button> <Link to='/addItem' ><button className='btn btn-info'>Add Item</button> </Link>
+                                <td className='fw-bold d-flex justify-content-center'><span>Available Stock: </span>{product.stock}</td>
+                                <td className='text-center m-auto'> <button onClick={() => handleDelete(product._id)} className='btn btn-danger px-2'>Delete</button>
                                 </td>
                             </tr>
 
 
                         </tbody>
                     </Table>
-
-
-
-
+                
                 </div>)
             }
+             <div className='text-center'>
+                    <Link to='/addItem' ><button className='btn btn-info w-75 p-3 fw-bold'>Add Item</button> </Link>
+                    </div>
         </div>
     );
 };

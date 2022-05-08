@@ -103,7 +103,7 @@ const Inventory = () => {
 
                     </div>
                 </div>
-                <h4 className='text-center text-primary mt-3'>Update Stock Quantity</h4>
+                <h4 className='text-center text-primary mt-3'>Upadate Stock Quantity</h4>
                 <div className='mt-3 w-75 mx-auto '>
                     <div className="form-outline mb-4">
                         <input onChange={inputValue} type="text" id="form4Example1" className="form-control" placeholder='Stock Quantity' />
