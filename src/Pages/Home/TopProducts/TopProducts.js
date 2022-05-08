@@ -35,7 +35,7 @@ const TopProducts = () => {
   
   <div className="form-check d-flex justify-content-center mb-4">
     <input className="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
-    <label className="form-check-label" for="form4Example4">
+    <label className="form-check-label" htmlFor="form4Example4">
       Send me a copy of this message
     </label>
   </div>

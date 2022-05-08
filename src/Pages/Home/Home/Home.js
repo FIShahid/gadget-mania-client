@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Counter from '../../Counter/Counter';
 import ManageInventory from '../../ManageInventory/ManageInventory';
 import Banner from '../Banner/Banner';
 import Products from '../Products/Products';
@@ -16,6 +17,7 @@ const Home = () => {
             </div>
             <Seller></Seller>
             <TopProducts></TopProducts>
+            <Counter></Counter>
         </div>
     );
 };
