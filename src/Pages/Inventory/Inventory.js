@@ -84,7 +84,7 @@ const Inventory = () => {
 
     return (
         <div>
-            <h2 className='text-center text-primary mt-3'>Inventory Items: </h2>
+            <h2 className='text-center mt-3' style={{color:'#ef5350'}}>Inventory Items: </h2>
             <div class="container py-3 ">
                 <div class="card shadow-lg p-2">
                     <div class="row ">
@@ -98,18 +98,20 @@ const Inventory = () => {
                                 <h6>Seller:{product.seller}</h6>
                                 <h6>Price: $ {product.price}</h6>
                                 <h5>Stock:{product.stock}</h5>
-                                <button className='btn btn-primary mt-3 w-75 m-auto rounded-pill' onClick={() => minus(_id)}> Delivered</button>
+                                <button className='btn  mt-3 w-75 m-auto rounded-pill' style={{ backgroundColor: '#66bb6a' }}onClick={() => minus(_id)}> Delivered</button>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <h4 className='text-center text-primary mt-3'>Upadate Stock Quantity</h4>
-                <div className='mt-3 w-75 mx-auto '>
+                <h4 className='text-center mt-3' style={{color:'#ef5350'}}>Update Stock Quantity</h4>
+                <div className='mt-3 w-50 mx-auto '>
                     <div className="form-outline mb-4">
                         <input onChange={inputValue} type="text" id="form4Example1" className="form-control" placeholder='Stock Quantity' />
                         <p>{error}</p>
-                        <button className='btn btn-primary w-100 ' onClick={() => updateStock(_id)}>Update Stock</button>
+                        <div className='text-center'>
+                        <button className='btn w-50 ' style={{ backgroundColor: '#66bb6a' }} onClick={() => updateStock(_id)}>Update Stock</button>
+                        </div>
                     </div>
 
                 </div>
@@ -118,7 +120,7 @@ const Inventory = () => {
 
 
             <div className='text-center'>
-                <Link to='/manageInventory' element={<ManageInventory></ManageInventory>} > <button className='btn btn-info w-50 mx-auto'>Manage Inventory</button></Link>
+                <Link to='/manageInventory' element={<ManageInventory></ManageInventory>} > <button className='btn btn-info w-25 p-3 mx-auto'>Manage Inventory</button></Link>
             </div>
 
 

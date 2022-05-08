@@ -2,7 +2,7 @@ import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
 //const axios = require('axios');
@@ -74,6 +74,9 @@ const MyItem = () => {
 
                 </div>)
             }
+            <div className='text-center'>
+                <Link to='/addItem' ><button className='btn btn-info w-50 p-3 fw-bold rounded-pill' style={{ backgroundColor: '#66bb6a' }}>Add Item</button> </Link>
+                </div>
         </div>
     );
 };
