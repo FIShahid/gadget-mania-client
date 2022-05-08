@@ -28,19 +28,22 @@ const ManageItem = () => {
             products.map(product => <div key={product._id}>
                 <Table striped bordered hover responsive variant='dark' className='container   ' >
 
-                   
-                    <tbody className='' >
-                        <tr className=''>
-                            <td className='fw-bold d-flex justify-content-center'>{product.name}</td>
-                            <td className=' d-flex justify-content-center'><img style={{height:'80px'}} src={product.img} alt="" /></td>
-
-                            <td className='fw-bold d-flex justify-content-center'><span>Available Stock: </span>{product.stock}</td>
-                            <td className='text-center m-auto'> <button onClick={() => handleDelete(product._id)} className='btn btn-danger px-2'>Delete</button>
-                            </td>
-                        </tr>
+                <tbody  >
+                            <tr className=''>
+                                <td className='fw-bold d-flex justify-content-center text-primary'>Product Name:{product.name}</td>
+                                <td className=' d-flex justify-content-center'><img style={{ height: '80px' }} src={product.img} alt="" /></td>
 
 
-                    </tbody>
+                                <td className='fw-bold d-flex justify-content-center'><span>Available Stock: </span>{product.stock}</td>
+                                <td className='d-flex justify-content-center text-success fw-bold'><span>Price</span> $ {product.price}</td>
+                                <td className='d-flex justify-content-center text-info fw-bold'><span>Seller</span>: {product.seller}</td>
+                                <td className='text-center m-auto '> <button onClick={() => handleDelete(product._id)} className='btn btn-danger px-2'>Delete</button>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+
                 </Table>
             
             </div>)
