@@ -4,8 +4,8 @@ import Counter from '../../Counter/Counter';
 import ManageInventory from '../../ManageInventory/ManageInventory';
 import Banner from '../Banner/Banner';
 import Products from '../Products/Products';
-import Seller from '../Seller/Seller';
-import TopProducts from '../TopProducts/TopProducts';
+import TopSelling from '../TopSelling/TopSelling';
+import ProductRequest from '../ProductRequest/ProductRequest';
 
 const Home = () => {
     return (
@@ -15,8 +15,8 @@ const Home = () => {
             <div className='text-center'>
             <Link to='/manageInventory' element={<ManageInventory></ManageInventory>} > <button className='btn btn-info w-50 mx-5 mt-5'>Manage Inventory</button></Link>
             </div>
-            <Seller></Seller>
-            <TopProducts></TopProducts>
+            <TopSelling></TopSelling>
+            <ProductRequest></ProductRequest>
             <Counter></Counter>
         </div>
     );

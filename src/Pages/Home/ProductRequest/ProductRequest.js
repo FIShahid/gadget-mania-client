@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TopProducts = () => {
+const ProductRequest = () => {
     const handleForm=(e)=>{
         e.preventDefault()
     }
@@ -52,4 +52,4 @@ const TopProducts = () => {
     );
 };
 
-export default TopProducts;
+export default ProductRequest;
